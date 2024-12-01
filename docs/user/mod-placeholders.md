@@ -107,6 +107,9 @@ These placeholders are provided by other mods. Some are build in directly, while
 - `%playerpronouns:raw_pronouns%` / `%playerpronouns:raw_pronouns [default]%` - Displays player's pronouns as raw text, or `default` if
   unset. This allows text formatting to be embedded into the pronouns.
 
+### [Solstice Essentials](https://solstice.alexdevs.me)
+- `%solstice:afk%` - Displays the AFK tag when the player is away from keyboard, configurable via the config.
+
 ### [Spark](https://spark.lucko.me/download)
 
 - `%spark:tps%` / `%spark:tps duration%` - Shows server TPS. `duration` can be `5s`, `10s`, `1m`, `5m`, or `15m`. Shows all durations if
@@ -138,9 +141,6 @@ These placeholders are provided by other mods. Some are build in directly, while
 
 - `%vanish:vanished%` - Displays a text (configurable via config) if a player is vanished.
 - `%vanish:online%` - The amount of players that the player viewing the placeholder can see.
-
-### [Solstice Essentials](https://solstice.alexdevs.me)
-- `%solstice:afk%` - Displays the AFK tag when the player is away from keyboard, configurable via the config.
 
 *[TPS]: Ticks Per Second. The number of ticks per second executing on the server. <20 TPS means the server is lagging.
 *[MSPT]: Milliseconds Per Tick. The number of milliseconds it takes for a tick on the server. >50 MSPT means the server is lagging.
