@@ -139,7 +139,11 @@ These placeholders are provided by other mods. Some are build in directly, while
 - `%vanish:vanished%` - Displays a text (configurable via config) if a player is vanished.
 - `%vanish:online%` - The amount of players that the player viewing the placeholder can see.
 
+### [Solstice Essentials](https://solstice.alexdevs.me)
+- `%solstice:afk%` - Displays the AFK tag when the player is away from keyboard, configurable via the config.
+
 *[TPS]: Ticks Per Second. The number of ticks per second executing on the server. <20 TPS means the server is lagging.
 *[MSPT]: Milliseconds Per Tick. The number of milliseconds it takes for a tick on the server. >50 MSPT means the server is lagging.
 *[UUID]: UUIDs are used by minecraft to identify players and entities
 *[UUIDs]: UUIDs are used by minecraft to identify players and entities
+
