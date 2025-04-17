@@ -1,5 +1,6 @@
 package eu.pb4.placeholders.impl.textparser.providers;
 
+
 import eu.pb4.placeholders.api.parsers.format.BaseFormat;
 
 public record LenientFormat() implements BaseFormat {

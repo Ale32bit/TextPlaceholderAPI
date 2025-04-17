@@ -1,5 +1,6 @@
 package eu.pb4.placeholders.impl.textparser;
 
+
 import eu.pb4.placeholders.api.node.TextNode;
 import eu.pb4.placeholders.api.parsers.NodeParser;
 import eu.pb4.placeholders.api.parsers.TagLikeParser;
@@ -7,7 +8,6 @@ import eu.pb4.placeholders.api.parsers.TagLikeWrapper;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public record MergedParser(NodeParser[] parsers) implements NodeParser {

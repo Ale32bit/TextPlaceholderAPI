@@ -177,34 +177,34 @@ public class TextParserV1 implements NodeParser {
 
         static TagNodeBuilder selfClosing(SelfTagParsedCreator selfTagCreator) {
             return (tag, data, input, handlers, endAt) -> {
-                return new TextParserV1.TagNodeValue(selfTagCreator.createTextNode(data, new TagParserGetterParser(handlers)), 0);
+                return new TagNodeValue(selfTagCreator.createTextNode(data, new TagParserGetterParser(handlers)), 0);
             };
         }
 
         static TagNodeBuilder wrapping(FormattingTagParsedCreator formattingTagCreator) {
             return (tag, data, input, handlers, endAt) -> {
                 var out = parseNodesWith(input, handlers, endAt);
-                return new TextParserV1.TagNodeValue(formattingTagCreator.createTextNode(out.nodes(), data, new TagParserGetterParser(handlers)), out.length());
+                return new TagNodeValue(formattingTagCreator.createTextNode(out.nodes(), data, new TagParserGetterParser(handlers)), out.length());
             };
         }
 
         static TagNodeBuilder selfClosing(SelfTagCreator selfTagCreator) {
             return (tag, data, input, handlers, endAt) -> {
-                return new TextParserV1.TagNodeValue(selfTagCreator.createTextNode(data), 0);
+                return new TagNodeValue(selfTagCreator.createTextNode(data), 0);
             };
         }
 
         static TagNodeBuilder wrapping(FormattingTagCreator formattingTagCreator) {
             return (tag, data, input, handlers, endAt) -> {
                 var out = parseNodesWith(input, handlers, endAt);
-                return new TextParserV1.TagNodeValue(formattingTagCreator.createTextNode(out.nodes(), data), out.length());
+                return new TagNodeValue(formattingTagCreator.createTextNode(out.nodes(), data), out.length());
             };
         }
 
         static TagNodeBuilder wrappingBoolean(BooleanFormattingTagCreator formattingTagCreator) {
             return (tag, data, input, handlers, endAt) -> {
                 var out = parseNodesWith(input, handlers, endAt);
-                return new TextParserV1.TagNodeValue(formattingTagCreator.createTextNode(out.nodes(), data == null || data.isEmpty() || !data.equals("false")), out.length());
+                return new TagNodeValue(formattingTagCreator.createTextNode(out.nodes(), data == null || data.isEmpty() || !data.equals("false")), out.length());
             };
         }
 

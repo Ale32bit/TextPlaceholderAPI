@@ -1,5 +1,7 @@
 package eu.pb4.placeholders.api.parsers.format;
 
+
+
 public record MultiCharacterFormat(char[] start, char[] end, char[] argument, char[] argumentWrappers) implements BaseFormat {
     public MultiCharacterFormat(String start, String end, String argument) {
         this(start.toCharArray(), end.toCharArray(), argument.toCharArray(), DEFAULT_ARGUMENT_WRAPPER);

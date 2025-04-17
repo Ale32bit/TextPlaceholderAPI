@@ -1,11 +1,9 @@
 package eu.pb4.placeholders.impl;
 
-import com.google.gson.JsonElement;
 import com.mojang.datafixers.util.Either;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.JsonOps;
 import eu.pb4.placeholders.api.arguments.StringArgs;
 
 import java.util.stream.Stream;

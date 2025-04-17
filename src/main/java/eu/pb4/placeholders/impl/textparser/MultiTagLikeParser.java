@@ -1,5 +1,6 @@
 package eu.pb4.placeholders.impl.textparser;
 
+
 import eu.pb4.placeholders.api.node.LiteralNode;
 import eu.pb4.placeholders.api.parsers.TagLikeParser;
 import org.apache.commons.lang3.tuple.Pair;
