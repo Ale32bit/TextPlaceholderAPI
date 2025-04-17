@@ -144,6 +144,8 @@ sourceSets.main.resources.srcDir generateModMetadata
 // To avoid having to run "generateModMetadata" manually, make it run on every project reload
 neoForge.ideSyncTask generateModMetadata
 
+def env = System.getenv()
+
 // Example configuration to allow publishing using the maven-publish plugin
 publishing {
     publications {
@@ -154,6 +156,27 @@ publishing {
     repositories {
         maven {
             url "file://${project.projectDir}/repo"
+        }
+    }
+
+    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+    repositories {
+        // Add repositories to publish to here.
+        // Notice: This block does NOT have the same function as the block in the top level.
+        // The repositories here will be used for publishing your artifact, not for
+        // retrieving dependencies.
+        repositories {
+            if (env.MAVEN_URL) {
+                maven {
+                    credentials {
+                        username env.MAVEN_USERNAME
+                        password env.MAVEN_PASSWORD
+                    }
+                    url env.MAVEN_URL
+                }
+            } else {
+                mavenLocal()
+            }
         }
     }
 }
